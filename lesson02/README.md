@@ -16,6 +16,13 @@
 
 В проекте приложен скриншот (lesson02/screenshots/makefile_screenshot.png)
 ![makefile_screenshot.png](./screenshots/makefile_screenshot.png)
+UPD. Как вариант, можно дополнительно исключить отладочную информацию при выполнении build (флаг -ldflags "-s -w").  
+А также сжать исполняемые файлы. Для этого установить upx-ucl  
+`sudo apt install upx-ucl`  
+И запустить сжатие:  
+`upx --best --lzma agent fibonacci-linux-x86_64`  
+По итогу, мой файл сжался почти в 5 раз от первоначального размера.
+
 ## п. 2 Документация к пакету (package fibonacci documentation)
 Устанавливаем доп. инструмент godoc  
 `go get golang.org/x/tools/cmd/godoc`  
