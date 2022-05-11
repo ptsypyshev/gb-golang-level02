@@ -22,7 +22,7 @@ func getFlag(name string) (res string, err error) {
 		if v := recover(); v != nil {
 			fmt.Println("recovered: ", v)
 			err = CustomError{
-				msg:      "Used broken flag",
+				msg:      fmt.Sprintf("Used broken %v", v),
 				datetime: time.Now(),
 			}
 		}

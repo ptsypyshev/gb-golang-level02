@@ -17,6 +17,7 @@ func main() {
 	flag.Parse()
 
 	if dirPath == "" {
+		fmt.Println("Warning! You haven't specified directory, try to create 'files' in current directory")
 		curPath, err := os.Getwd()
 		if err != nil {
 			fmt.Println("Cannot get current work directory")
@@ -25,7 +26,7 @@ func main() {
 		dirPath = filepath.Join(curPath, "files")
 		if _, err := os.Stat(dirPath); os.IsNotExist(err) {
 			if mkdirError := os.Mkdir(dirPath, 0755); mkdirError != nil {
-				fmt.Println("Cannot make directory for new files")
+				fmt.Printf("Cannot make directory for new files in %s", curPath)
 				os.Exit(1)
 			}
 		}
