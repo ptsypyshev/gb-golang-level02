@@ -92,7 +92,7 @@ $ git revert HEAD
 1 file changed, 38 insertions(+), 34 deletions(-)  
 rewrite checker/checker.go (80%)  
 
-$ git log --oneline`  
+$ git log --oneline
 22a7a2f (HEAD -> master) Revert "Add CheckBulk feature"
 1dcc8ae (tag: v1.0.1, origin/master) Add CheckBulk feature    
 8ae2ad7 (tag: v0.0.1) Initial commit
