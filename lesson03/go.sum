@@ -1,0 +1,4 @@
+github.com/ptsypyshev/golang_semver_learning v1.0.2 h1:Y9llVpCCeqUnl98TrjoR17u5404dHaMkcMs9eX5FraE=
+github.com/ptsypyshev/golang_semver_learning v1.0.2/go.mod h1:u+MzkJIvSlFTaKNA3zXfSkh4czu8Ctrb0jOCpS1TkjQ=
+github.com/ptsypyshev/golang_semver_learning/v2 v2.0.0 h1:4ZuRXV3+tmlQXE4INjQFCYVuS0x4Ad1s/JNjxgJJGhU=
+github.com/ptsypyshev/golang_semver_learning/v2 v2.0.0/go.mod h1:bbFjgY7hrPG4ikhqpi8RcCw+0ku61GhVisBhaTFf9mA=
