@@ -15,15 +15,13 @@ import (
 func sigHandler(cancel context.CancelFunc) {
 	sigChannel := make(chan os.Signal)
 	signal.Notify(sigChannel, syscall.SIGTERM, syscall.SIGINT)
-	for {
-		select {
-		case <-sigChannel:
-			fmt.Printf("%s Get SIGTERM, try to stop.\n", time.Now().Format("2006/01/02 15:04:05"))
-			cancel()
-			time.Sleep(time.Second)
-			log.Fatal("Application is killed!\n")
-		}
-	}
+
+	<-sigChannel
+	fmt.Printf("%s Get SIGTERM, try to stop.\n", time.Now().Format("2006/01/02 15:04:05"))
+	cancel()
+	time.Sleep(time.Second)
+	log.Fatal("Application is killed!\n")
+
 }
 
 func main() {
