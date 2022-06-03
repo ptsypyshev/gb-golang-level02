@@ -174,6 +174,19 @@ func goInForFinder(currentNode ast.Node, counter int) int {
 Я не нашел в документации на пакет `go/ast`, как вывести количество итераций цикла.
 Поэтому пришлось "доставать" операнд из условия for и приводить его к int.
 
+Результаты выполнения функции:
+```shell
+$ main
+Usage: ./main [file_path] [function_name]
+$ main test_file1.go main
+I\'ve count 1001 runs of goroutines in main function of .\test_file1.go file.
+$ main test_file1.go another
+I\'ve count 0 runs of goroutines in another function of .\test_file1.go file.
+$ main test_file2.go main
+I\'ve count 0 runs of goroutines in main function of .\test_file2.go file.
+$ main test_file2.go another
+I\'ve count 10 runs of goroutines in another function of .\test_file2.go file.
+```
 
 ## 3. (*не обязательное*). Написать кодогенератор под какую-нибудь задачу.
 
